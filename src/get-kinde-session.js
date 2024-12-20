@@ -239,7 +239,7 @@ export const getKindeSession = async (request) => {
     }
   };
 
-  const headers = await refreshTokens();
+  const headers = generateCookieHeader(request, cookies);
 
   return {
     headers,
